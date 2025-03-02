@@ -1,6 +1,7 @@
 package org.example.factory;
 
 import org.example.simplecals.*;
+import org.example.trigonometri.*;
 
 public class CalculatorFactory {
 
@@ -14,5 +15,18 @@ public class CalculatorFactory {
                 default -> throw new IllegalArgumentException("Invalid operation" + operation);
             };
     }
+    public static trigonometriOperation getOpeeration2(String operation){
+            return switch (operation){
+                case "sinTheta" ,"sin0" -> new SinTheta();
+                case "tentheta" ,"tan0" -> new TanTheta();
+                default -> throw new IllegalArgumentException("Invalid operation" + operation);
+            };
+    }
 
 }
+
+
+
+// case "Add":
+//return operation
+// break;

@@ -13,7 +13,7 @@ public class Main {
         while (true) {
             try {
                 System.out.println("\nCLI Calculator");
-                System.out.println("Available Operation : add (+), subtract (-), multiply (*), divide (/), module (%)");
+                System.out.println("Available Operation : add (+) , subtract (-), multiply (*), divide (/), module (%)");
                 System.out.println("Enter `exit` to quit");
 
                 System.out.println("enter first number");
@@ -30,13 +30,14 @@ public class Main {
                 String input2 = scanner.next();
                 if (input2.equalsIgnoreCase("exit")) break;
                 double num2 = Double.parseDouble(input2);
+
                 Airthmatic op = CalculatorFactory.getOperation(operation);
                 double result = op.calculation(num1, num2);
 
                 System.out.println("Result: " + result);
 
             } catch (Exception e) {
-                System.out.println("Error" + e.getMessage());
+                System.out.println("Error " + e.getMessage());
             }
         }
         System.out.println("Calculator exited");
